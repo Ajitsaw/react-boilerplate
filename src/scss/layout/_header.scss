@@ -1,0 +1,53 @@
+/* Header */
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 0 0 rgb(38 38 40 / 9%);
+    transition: background-color .5s,color .5s;
+    @include media-breakpoint-down(lg) {}
+
+    @include media-breakpoint-down(md) {
+        padding: 15px;
+        height: auto;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        transition: color .5s;
+        svg {
+            margin-right: 10px;
+        }
+        
+    }
+    .header-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        nav {
+            ul {
+                display: flex;
+                li {
+                    margin-right: 30px;
+                    a {
+                        transition: color .5s;
+                        &.active {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+        .button {
+            font-size: 16px;
+        }
+    }
+}
